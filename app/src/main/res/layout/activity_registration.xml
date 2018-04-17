@@ -11,97 +11,129 @@
         android:layout_width="match_parent"
         android:src="@drawable/background"
         android:scaleType="centerCrop"
-        android:id="@+id/registerBG"   />
+        android:id="@+id/registerBG"   android:contentDescription="TODO" />
 
-    //Logo
-    <ImageView
-        android:id="@+id/registerLogo"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="28dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/logo" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="40dp"
 
         >
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
             >
 
-            //"Join us" image/text
+
+            //Logo
+
             <ImageView
+                android:id="@+id/ivRegLogo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+
+                android:layout_marginBottom="55dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
+
+            //"Join us" image/text
+
+            <ImageView
+                android:id="@+id/ivJoinUs"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:src="@drawable/joinus_text"
                 android:layout_marginBottom="15dp"
-                />
+                android:contentDescription="TODO"
+                android:src="@drawable/joinus_text" />
 
             //Username rectangle with icon and hint
+
             <AutoCompleteTextView
+                android:id="@+id/atvUsernameReg"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/rounded_rect"
-                android:hint="Username"
-                android:textSize="15dp"
                 android:drawableLeft="@drawable/icon_person"
                 android:drawablePadding="10dp"
-                android:paddingStart="10dp"
+                android:drawableStart="@drawable/icon_person"
+                android:hint="@string/usernameReg"
                 android:paddingEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/usernameReg" />
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp" />
 
             //Email rectangle with icon and hint
+
             <AutoCompleteTextView
+                android:id="@+id/atvEmailReg"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/rounded_rect"
-                android:hint="Email"
-                android:textSize="15dp"
                 android:drawableLeft="@drawable/icon_mail"
                 android:drawablePadding="10dp"
-                android:paddingStart="10dp"
+                android:drawableStart="@drawable/icon_mail"
+                android:hint="@string/emailReg"
                 android:paddingEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/emailReg" />
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp" />
 
             //Password rectangle with icon and hint
+
             <AutoCompleteTextView
+                android:id="@+id/atvPasswordReg"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/rounded_rect"
-                android:hint="Password"
-                android:textSize="15dp"
                 android:drawableLeft="@drawable/icon_password"
                 android:drawablePadding="10dp"
-                android:paddingStart="10dp"
+                android:drawableStart="@drawable/icon_password"
+                android:hint="@string/passwordReg"
                 android:paddingEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/passwordReg" />
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp" />
 
 
             <Button
+                android:id="@+id/btnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign up"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/btnsignup_gradient"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/btnsignup_gradient"
+                android:text="@string/sign_upReg"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="@string/signin_redirect"
+                android:textColor="@color/gray" />
 
 
-            />
+                />
+
+
 
         </LinearLayout>
 

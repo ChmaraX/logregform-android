@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LogRegForm</string>
+    <string name="usernameReg">Username</string>
+    <string name="emailReg">Email</string>
+    <string name="passwordReg">Password</string>
+    <string name="sign_upReg">Sign up</string>
+    <string name="signin_redirect">Already a member? Sign in!</string>
 </resources>
