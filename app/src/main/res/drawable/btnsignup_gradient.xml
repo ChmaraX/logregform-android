@@ -11,7 +11,7 @@
 
             <stroke
                 android:width="1dp"
-                android:color="0575E6" />
+                android:color="#0575E6" />
 
             <corners
                 android:radius="4dp" />
@@ -27,12 +27,12 @@
 
     <item android:state_pressed="true">
         <shape>
-            <solid>
-                android:color="0575E6"
+            <solid
+                android:color="#0575E6" />
 
                 <stroke
                     android:width="1dp"
-                    android:color="69f8e4" />
+                    android:color="#69f8e4" />
 
                 <corners
                     android:radius="4dp" />
@@ -43,7 +43,7 @@
                     android:bottom="10dp"
                     android:left="10dp" />
 
-            </solid>
+            />
         </shape>
     </item>
 

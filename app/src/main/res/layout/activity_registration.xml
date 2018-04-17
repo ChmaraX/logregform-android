@@ -45,7 +45,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:src="@drawable/joinUs"
+                android:src="@drawable/joinus_text"
                 android:layout_marginBottom="15dp"
                 />
 
@@ -53,10 +53,10 @@
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/roundedRect"
+                android:background="@drawable/rounded_rect"
                 android:hint="Username"
                 android:textSize="15dp"
-                android:drawableLeft="@drawable/iconPerson"
+                android:drawableLeft="@drawable/icon_person"
                 android:drawablePadding="10dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -67,10 +67,10 @@
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/roundedRect"
+                android:background="@drawable/rounded_rect"
                 android:hint="Email"
                 android:textSize="15dp"
-                android:drawableLeft="@drawable/iconMail"
+                android:drawableLeft="@drawable/icon_mail"
                 android:drawablePadding="10dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -81,10 +81,10 @@
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/roundedRect"
+                android:background="@drawable/rounded_rect"
                 android:hint="Password"
                 android:textSize="15dp"
-                android:drawableLeft="@drawable/iconPassword"
+                android:drawableLeft="@drawable/icon_password"
                 android:drawablePadding="10dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
