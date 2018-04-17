@@ -13,16 +13,15 @@
         android:scaleType="centerCrop"
         android:id="@+id/registerBG"   />
 
+    //Logo
     <ImageView
         android:id="@+id/registerLogo"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-
-
+        android:layout_height="160dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="28dp"
         android:scaleType="fitCenter"
         android:src="@drawable/logo" />
 
@@ -30,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
 
         >
 
@@ -38,8 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             >
 
             //"Join us" image/text
@@ -97,6 +96,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sign up"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btnsignup_gradient"
+                android:layout_marginTop="15dp"
+
 
             />
 
