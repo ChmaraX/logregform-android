@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chmarax.logregform.RegistrationActivity">
+    tools:context="com.example.chmarax.logregform.LoginActivity">
 
     <ImageView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:src="@drawable/background"
         android:scaleType="centerCrop"
-        android:id="@+id/registerBG"   android:contentDescription="TODO" />
+        android:id="@+id/registerBG"  />
 
 
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="10dp"
 
         >
 
@@ -33,10 +33,9 @@
             >
 
 
-            //Logo
 
             <ImageView
-                android:id="@+id/ivRegLogo"
+                android:id="@+id/ivLogLogo"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
 
@@ -46,20 +45,19 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/logo" />
 
-            //"Join us" image/text
 
             <ImageView
-                android:id="@+id/ivJoinUs"
+                android:id="@+id/ivSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginBottom="15dp"
                 android:contentDescription="TODO"
-                android:src="@drawable/joinus_text" />
+                android:src="@drawable/signIn" />
 
-            //Username rectangle with icon and hint
+
 
             <AutoCompleteTextView
-                android:id="@+id/atvUsernameReg"
+                android:id="@+id/atvUsernameLog"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="10dp"
@@ -74,28 +72,9 @@
                 android:textColorHint="@color/gray"
                 android:textSize="15sp" />
 
-            //Email rectangle with icon and hint
 
             <AutoCompleteTextView
-                android:id="@+id/atvEmailReg"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_rect"
-                android:drawableLeft="@drawable/icon_mail"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/icon_mail"
-                android:hint="@string/emailReg"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/gray"
-                android:textSize="15sp" />
-
-            //Password rectangle with icon and hint
-
-            <AutoCompleteTextView
-                android:id="@+id/atvPasswordReg"
+                android:id="@+id/atvPasswordLog"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -112,27 +91,47 @@
                 android:textSize="15sp" />
 
 
+            <TextView
+                android:id="@+id/tvForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:text="@string/signin_redirect"
+                android:textColor="@color/gray"
+                tools:text="Forgot password?" />
+
+
             <Button
-                android:id="@+id/btnSignUp"
+                android:id="@+id/btnSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnsignin_gradient"
-                android:text="@string/sign_upReg"
-                android:textColor="#FFFFFF" />
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btnsignup_gradient"
+                android:text="@string/sign_inLog"
+                android:textColor="#FFFFFF"
+                tools:text="Sign in" />
+
+
+            <ImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/btnTwitter" />
+
 
             <TextView
                 android:id="@+id/tvSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/signin_redirect"
-                android:textColor="@color/gray" />
-
-
-                />
-
+                android:textColor="@color/gray"
+                tools:text="Don't have an account? Register here." />
 
 
         </LinearLayout>

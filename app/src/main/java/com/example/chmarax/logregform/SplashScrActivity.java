@@ -67,8 +67,6 @@ public class SplashScrActivity extends AppCompatActivity {
                 });
 
 
-
-
             }
 
             @Override
