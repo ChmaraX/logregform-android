@@ -53,7 +53,7 @@ public class RegistrationActivity extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(RegistrationActivity.this,LoginActivity.class));
             }
         });
 
@@ -94,7 +94,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         progressDialog.dismiss();
-                        sendUserData(inputName);
+                        sendUserData(inputName, inputPw);
                         Toast.makeText(RegistrationActivity.this,"You've been registered successfully.",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(RegistrationActivity.this,MainActivity.class));
                     }
@@ -108,12 +108,12 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
 
-    private void sendUserData(String username){
+    private void sendUserData(String username, String password){
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
-        UserProfile userProfile = new UserProfile(username);
-        myRef.setValue(userProfile);
+        DatabaseReference users = firebaseDatabase.getReference("users");
+        UserProfile user = new UserProfile(username, password);
+        users.push().setValue(user);
 
     }
 

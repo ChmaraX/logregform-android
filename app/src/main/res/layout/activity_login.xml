@@ -52,12 +52,11 @@
                 android:layout_height="30dp"
                 android:layout_marginBottom="15dp"
                 android:contentDescription="TODO"
-                android:src="@drawable/signIn" />
-
+                android:src="@drawable/sign_in" />
 
 
             <AutoCompleteTextView
-                android:id="@+id/atvUsernameLog"
+                android:id="@+id/atvEmailLog"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="10dp"
@@ -65,7 +64,7 @@
                 android:drawableLeft="@drawable/icon_person"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/icon_person"
-                android:hint="@string/usernameReg"
+                android:hint="@string/emailReg"
                 android:paddingEnd="10dp"
                 android:paddingStart="10dp"
                 android:textColor="@color/white"
@@ -98,9 +97,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
-                android:text="@string/signin_redirect"
-                android:textColor="@color/gray"
-                tools:text="Forgot password?" />
+                android:text="Forgot password?"
+                android:textColor="@color/gray" />
 
 
             <Button
@@ -110,8 +108,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/btnsignup_gradient"
                 android:text="@string/sign_inLog"
-                android:textColor="#FFFFFF"
-                tools:text="Sign in" />
+                android:textColor="#FFFFFF" />
 
 
             <ImageView
@@ -119,8 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="10dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/btnTwitter" />
+                android:src="@drawable/btn_twitter" />
 
 
             <TextView
@@ -129,9 +125,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="@string/signin_redirect"
-                android:textColor="@color/gray"
-                tools:text="Don't have an account? Register here." />
+                android:text="Don't have an account? Register here!"
+                android:textColor="@color/gray"  />
 
 
         </LinearLayout>
