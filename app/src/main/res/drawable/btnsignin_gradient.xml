@@ -43,7 +43,7 @@
                 android:bottom="10dp"
                 android:left="10dp" />
 
-            />
+
         </shape>
     </item>
 
