@@ -39,25 +39,33 @@
                 android:id="@+id/ivLogLogo"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-
                 android:layout_marginBottom="55dp"
                 android:layout_marginTop="18dp"
-                android:contentDescription="TODO"
                 android:scaleType="fitCenter"
                 android:src="@drawable/logo" />
 
 
             <ImageView
-                android:id="@+id/ivSignIn"
+                android:id="@+id/ivPassReset"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginBottom="15dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/sign_in" />
+                android:src="@drawable/password_reset" />
+
+            <TextView
+                android:id="@+id/tvPWinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="20dp"
+                android:text="You will receive an email with instructions on resetting password."
+                android:textAlignment="center"
+                android:textColor="@color/white" />
 
 
             <AutoCompleteTextView
-                android:id="@+id/atvEmailLog"
+                android:id="@+id/atvEmailRes"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="10dp"
@@ -73,15 +81,7 @@
                 android:textSize="15sp" />
 
 
-            <TextView
-                android:id="@+id/tvPWinfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="2dp"
-                android:text="You will receive an email with instructions on resetting password."
-                android:textAlignment="center"
-                android:textColor="@color/white" />
+
 
             <Button
                 android:id="@+id/btnReset"
@@ -96,7 +96,7 @@
 
 
             <TextView
-                android:id="@+id/tvSignIn"
+                android:id="@+id/tvGoBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
