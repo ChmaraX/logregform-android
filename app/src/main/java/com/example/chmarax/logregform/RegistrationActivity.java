@@ -45,7 +45,14 @@ public class RegistrationActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    registerUser();
+
+                final String inputName = username.getText().toString().trim();
+                final String inputPw = password.getText().toString().trim();
+                final String inputEmail = email.getText().toString().trim();
+
+                if(validateInput(inputName, inputPw, inputEmail))
+                         registerUser(inputName, inputPw, inputEmail);
+
             }
         });
 
@@ -74,21 +81,12 @@ public class RegistrationActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
     }
 
-    private void registerUser() {
+    private void registerUser(final String inputName, final String inputPw, String inputEmail) {
 
         progressDialog.setMessage("Verificating...");
         progressDialog.show();
 
-        final String inputName = username.getText().toString().trim();
-        final String inputPw = password.getText().toString().trim();
-        final String inputEmail = email.getText().toString().trim();
 
-
-        if(inputName.isEmpty() || inputPw.isEmpty() || inputEmail.isEmpty()){
-            Toast.makeText(RegistrationActivity.this,"Please fill all the details.",Toast.LENGTH_SHORT).show();
-            progressDialog.dismiss();
-        }
-        else{
             firebaseAuth.createUserWithEmailAndPassword(inputEmail,inputPw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -104,7 +102,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     }
                 }
             });
-        }
+
     }
 
 
@@ -115,6 +113,24 @@ public class RegistrationActivity extends AppCompatActivity {
         UserProfile user = new UserProfile(username, password);
         users.push().setValue(user);
 
+    }
+
+    private boolean validateInput(String inName, String inPw, String inEmail){
+
+        if(inName.isEmpty()){
+            username.setError("Username is empty.");
+            return false;
+        }
+        if(inPw.isEmpty()){
+            password.setError("Password is empty.");
+            return false;
+        }
+        if(inEmail.isEmpty()){
+            email.setError("Email is empty.");
+            return false;
+        }
+
+        return true;
     }
 
 

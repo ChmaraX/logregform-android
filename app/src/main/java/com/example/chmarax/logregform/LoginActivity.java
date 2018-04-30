@@ -50,13 +50,14 @@ public class LoginActivity extends AppCompatActivity {
                 String inPassword = password.getText().toString();
 
                 if(validateInput(inEmail, inPassword)){
-                    checkUser(inEmail, inPassword);
+                    signUser(inEmail, inPassword);
                 }
 
             }
         });
 
-        ivSignIn.setOnClickListener(new View.OnClickListener() {
+
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
@@ -76,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    public void checkUser(String email, String password){
+    public void signUser(String email, String password){
 
         progressDialog.setMessage("Verificating...");
         progressDialog.show();
@@ -116,10 +117,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public boolean validateInput(String email, String password){
+    public boolean validateInput(String inemail, String inpassword){
 
-        if(email.isEmpty() || password.isEmpty()){
-            Toast.makeText(LoginActivity.this,"Fill all the details.",Toast.LENGTH_SHORT).show();
+        if(inemail.isEmpty()){
+            email.setError("Email field is empty.");
+            return false;
+        }
+        if(inpassword.isEmpty()){
+            password.setError("Password is empty.");
             return false;
         }
 

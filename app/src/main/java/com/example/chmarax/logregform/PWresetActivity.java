@@ -36,25 +36,24 @@ public class PWresetActivity extends AppCompatActivity {
 
                 String email = atvEmail.getText().toString();
 
-                if(email.isEmpty()){
-                    Toast.makeText(PWresetActivity.this,"Please insert email.",Toast.LENGTH_SHORT).show();
+                if (email.isEmpty()) {
+                    atvEmail.setError("Please, fill the email field.",null);
                 }
-
-                firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(PWresetActivity.this,"Email has been sent successfully.",Toast.LENGTH_SHORT).show();
+                else {
+                    firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(PWresetActivity.this, "Email has been sent successfully.", Toast.LENGTH_SHORT).show();
                                 finish();
                                 startActivity(new Intent(PWresetActivity.this, LoginActivity.class));
+                            } else {
+                                Toast.makeText(PWresetActivity.this, "Invalid email address.", Toast.LENGTH_SHORT).show();
                             }
-                            else{
-                                Toast.makeText(PWresetActivity.this,"Invalid email address.",Toast.LENGTH_SHORT).show();
-                            }
-                    }
-                });
+                        }
+                    });
 
-
+                  }
 
             }
         });
@@ -79,6 +78,8 @@ public class PWresetActivity extends AppCompatActivity {
         tvSignin = findViewById(R.id.tvGoBack);
         atvEmail = findViewById(R.id.atvEmailRes);
         btnReset = findViewById(R.id.btnReset);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
     }
 }
