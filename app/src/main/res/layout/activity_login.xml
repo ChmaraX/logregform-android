@@ -7,11 +7,12 @@
     tools:context="com.example.chmarax.logregform.LoginActivity">
 
     <ImageView
-        android:layout_height="match_parent"
+        android:id="@+id/registerBG"
         android:layout_width="match_parent"
-        android:src="@drawable/background"
+        android:layout_height="match_parent"
+        android:contentDescription="Background of window"
         android:scaleType="centerCrop"
-        android:id="@+id/registerBG"  />
+        android:src="@drawable/background" />
 
 
 
@@ -33,7 +34,6 @@
             >
 
 
-
             <ImageView
                 android:id="@+id/ivLogLogo"
                 android:layout_width="match_parent"
@@ -41,7 +41,6 @@
 
                 android:layout_marginBottom="55dp"
                 android:layout_marginTop="18dp"
-                android:contentDescription="TODO"
                 android:scaleType="fitCenter"
                 android:src="@drawable/logo" />
 
@@ -51,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginBottom="15dp"
-                android:contentDescription="TODO"
+                android:contentDescription="Sign in text on registration activity"
                 android:src="@drawable/sign_in" />
 
 
@@ -98,7 +97,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
-                android:text="Forgot password?"
+                android:text="@string/forgot_password"
                 android:textColor="@color/gray" />
 
 
@@ -117,6 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="10dp"
+                android:contentDescription="Social site button"
                 android:src="@drawable/btn_twitter" />
 
 
@@ -126,8 +126,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Don't have an account? Register here!"
-                android:textColor="@color/gray"  />
+                android:text="@string/signup_redirect"
+                android:textColor="@color/gray" />
 
 
         </LinearLayout>
