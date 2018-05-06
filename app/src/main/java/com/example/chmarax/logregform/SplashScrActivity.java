@@ -23,13 +23,8 @@ public class SplashScrActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_scr);
+        init();
 
-        logoSplash = findViewById(R.id.ivLogoSplash);
-        logoWhite = findViewById(R.id.ivLogoWhite);
-        chmaraTech = findViewById(R.id.ivCHTtext);
-        anim1 = AnimationUtils.loadAnimation(getBaseContext(), R.anim.rotate);
-        anim2 = AnimationUtils.loadAnimation(getBaseContext(), R.anim.fadeout);
-        anim3 = AnimationUtils.loadAnimation(getBaseContext(), R.anim.fadein);
 
         logoSplash.startAnimation(anim1);
         anim1.setAnimationListener(new Animation.AnimationListener() {
@@ -78,6 +73,17 @@ public class SplashScrActivity extends AppCompatActivity {
 
 
 
+    }
+
+
+    private void init(){
+
+        logoSplash = findViewById(R.id.ivLogoSplash);
+        logoWhite = findViewById(R.id.ivLogoWhite);
+        chmaraTech = findViewById(R.id.ivCHTtext);
+        anim1 = AnimationUtils.loadAnimation(getBaseContext(), R.anim.rotate);
+        anim2 = AnimationUtils.loadAnimation(getBaseContext(), R.anim.fadeout);
+        anim3 = AnimationUtils.loadAnimation(getBaseContext(), R.anim.fadein);
     }
 
 

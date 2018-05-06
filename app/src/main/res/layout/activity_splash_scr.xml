@@ -4,25 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/background"
     tools:context="com.example.chmarax.logregform.SplashScrActivity">
 
 
-    <ImageView
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:src="@drawable/background"
-        android:scaleType="centerCrop"
-        android:id="@+id/registerBG"   android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/ivLogoSplash"
         android:layout_width="180dp"
         android:layout_height="202dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/registerBG"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -35,9 +28,8 @@
         android:layout_marginBottom="116dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/registerBG"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,9 +44,8 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="216dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/registerBG"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
