@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/btnsignin_gradient"
+                android:background="@drawable/btnsignup_gradient"
                 android:text="@string/sign_upReg"
                 android:textColor="#FFFFFF" />
 

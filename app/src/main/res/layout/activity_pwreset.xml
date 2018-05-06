@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/btnsignup_gradient"
+                android:background="@drawable/btnsignin_gradient"
                 android:text="Reset password"
                 android:textColor="#FFFFFF" />
 
