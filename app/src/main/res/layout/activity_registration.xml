@@ -26,8 +26,6 @@
             >
 
 
-            //Logo
-
             <ImageView
                 android:id="@+id/ivRegLogo"
                 android:layout_width="match_parent"
@@ -39,7 +37,7 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/logo" />
 
-            //"Join us" image/text
+
 
             <ImageView
                 android:id="@+id/ivJoinUs"
@@ -49,7 +47,6 @@
                 android:contentDescription="TODO"
                 android:src="@drawable/joinus_text" />
 
-            //Username rectangle with icon and hint
 
             <AutoCompleteTextView
                 android:id="@+id/atvUsernameReg"
@@ -67,7 +64,6 @@
                 android:textColorHint="@color/gray"
                 android:textSize="15sp" />
 
-            //Email rectangle with icon and hint
 
             <AutoCompleteTextView
                 android:id="@+id/atvEmailReg"
@@ -86,7 +82,7 @@
                 android:textColorHint="@color/gray"
                 android:textSize="15sp" />
 
-            //Password rectangle with icon and hint
+
 
             <AutoCompleteTextView
                 android:id="@+id/atvPasswordReg"
@@ -123,9 +119,6 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/signin_redirect"
                 android:textColor="@color/gray" />
-
-
-                />
 
 
 
