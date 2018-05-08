@@ -1,5 +1,5 @@
 <p align="center"><img width=12.5% src="https://github.com/ChmaraX/logregform-android/blob/master/app/src/main/res/drawable/logo_noshadow.png"></p>
-<h2><p align="center">Authentication form for Android</p>
+<p align="center"> <b> Authentication form for Android </p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![PyPI - Status](https://img.shields.io/pypi/status/Django.svg)
@@ -24,3 +24,37 @@
 - [ ] Social app login (not connected to API)
 
 
+
+## Interface Preview 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ChmaraX/logregform-android/master/Preview/3.jpeg" width="210"/>
+  <img src="https://raw.githubusercontent.com/ChmaraX/logregform-android/master/Preview/4.jpeg" width="210"/>
+  <img src="https://raw.githubusercontent.com/ChmaraX/logregform-android/master/Preview/1.jpeg" width="210"/>
+  <img src="https://raw.githubusercontent.com/ChmaraX/logregform-android/master/Preview/2.jpeg" width="210"/>
+</p>
+
+#### Splashscreen
+ <img src="https://raw.githubusercontent.com/ChmaraX/logregform-android/master/Preview/splash.gif" width="210"/>
+
+## Implementation
+
+#### google-services.json
+You need to set up your own [Firebase](https://firebase.google.com/) authenticator + database and download `google-services.json` file, then add it to `YourApp/app` folder:
+
+The dependencies are already set up.
+
+``` Java
+dependencies {
+
+...
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile 'com.google.firebase:firebase-core:15.0.0'
+    compile 'com.google.firebase:firebase-auth:15.0.0'
+    compile 'com.google.firebase:firebase-database:15.0.0'
+
+}
+```
